@@ -13,4 +13,9 @@ app.get('/version', function (req, res) {
     res.send(JSON.stringify({version:2}));
 });
 
+
+app.get("/href", function (req, res) {
+    res.sendFile('./test.html', {root: __dirname});
+});
+
 app.listen("8082");
